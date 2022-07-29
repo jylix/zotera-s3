@@ -1,0 +1,33 @@
+{
+  "name": "zotera-s3",
+  "version": "0.0.1",
+  "description": "A plugin for zotera",
+  "main": "dist/plugin.js",
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@zotera/types": "0.0.1",
+    "typescript": "4.7.4",
+    "vitest": "0.18.1",
+    "rollup": "2.77.0",
+    "@rollup/plugin-commonjs": "22.0.1",
+    "@rollup/plugin-node-resolve": "13.3.0",
+    "@rollup/plugin-typescript": "8.3.3",
+    "tslib": "2.4.0"
+  },
+  "keywords": ["zotera-plugin", "zotera"],
+  "scripts": {
+    "dev":  "rollup --config rollup.config.ts --configPlugin typescript --watch" ,
+    "build":  "rollup --config rollup.config.ts --configPlugin typescript" ,
+    "test": "vitest run" 
+  },
+  "zotera": {
+    "options": {
+      "minion": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  }
+}
